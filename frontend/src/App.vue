@@ -1,57 +1,29 @@
 <script setup>
-import { ref, onMounted } from "vue";
-
-const backendMessage = ref("Cargando mensaje del backend...");
-const loading = ref(true);
-const error = ref(false);
-
-onMounted(async () => {
-  try {
-    const response = await fetch("http://localhost:3000/api/health");
-    const data = await response.json();
-
-    backendMessage.value = data.message;
-  } catch (err) {
-    console.error("Error al conectar con el backend:", err);
-    backendMessage.value = "No se pudo conectar con el backend";
-    error.value = true;
-  } finally {
-    loading.value = false;
-  }
-});
 </script>
 
 <template>
-  <main>
-    <h1>Entire Adviser</h1>
-    <p>Web corporativa en construcción</p>
+  <div>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/services">Services</router-link>
+      <router-link to="/contact">Contact</router-link>
+    </nav>
 
-    <section>
-      <h2>Estado de la conexión</h2>
-
-      <p v-if="loading">Comprobando backend...</p>
-      <p v-else-if="error">{{ backendMessage }}</p>
-      <p v-else>{{ backendMessage }}</p>
-    </section>
-  </main>
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <style scoped>
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  margin-bottom: 0.5rem;
-}
-
-section {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  padding: 40px;
 }
 </style>
