@@ -1,30 +1,57 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref, onMounted } from "vue";
+
+const backendMessage = ref("Cargando mensaje del backend...");
+const loading = ref(true);
+const error = ref(false);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("http://localhost:3000/api/health");
+    const data = await response.json();
+
+    backendMessage.value = data.message;
+  } catch (err) {
+    console.error("Error al conectar con el backend:", err);
+    backendMessage.value = "No se pudo conectar con el backend";
+    error.value = true;
+  } finally {
+    loading.value = false;
+  }
+});
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <main>
+    <h1>Entire Adviser</h1>
+    <p>Web corporativa en construcción</p>
+
+    <section>
+      <h2>Estado de la conexión</h2>
+
+      <p v-if="loading">Comprobando backend...</p>
+      <p v-else-if="error">{{ backendMessage }}</p>
+      <p v-else>{{ backendMessage }}</p>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: Arial, sans-serif;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+h1 {
+  margin-bottom: 0.5rem;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
 }
 </style>
