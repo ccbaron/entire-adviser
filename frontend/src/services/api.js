@@ -1,7 +1,7 @@
-const API_URL = import.meta.env.VITE_API_URL;
+import { env } from "../config/env.js";
 
 export const apiRequest = async (endpoint, options = {}) => {
-  const response = await fetch(`${API_URL}${endpoint}`, {
+  const response = await fetch(`${env.apiUrl}${endpoint}`, {
     headers: {
       "Content-Type": "application/json",
       ...(options.headers || {}),
