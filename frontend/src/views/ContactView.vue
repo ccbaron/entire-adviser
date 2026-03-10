@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref } from "vue";
+import { submitContactForm } from "../services/contactService";
 
 const form = reactive({
   name: "",
@@ -29,20 +30,7 @@ const handleSubmit = async () => {
   loading.value = true;
 
   try {
-    const response = await fetch("http://localhost:3000/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.message || "Error al enviar el formulario");
-    }
-
+    const data = await submitContactForm(form);
     successMessage.value = data.message;
     resetForm();
   } catch (error) {
