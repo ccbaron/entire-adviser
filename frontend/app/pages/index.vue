@@ -32,14 +32,14 @@ useSeoMeta({
         <div class="flex flex-wrap gap-4 pt-1">
           <NuxtLink
             to="/contact"
-            class="inline-flex min-w-[210px] items-center justify-center rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+            class="inline-flex min-w-52.5 items-center justify-center rounded-xl bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
           >
             Solicitar una consulta
           </NuxtLink>
 
           <NuxtLink
             to="/services"
-            class="inline-flex min-w-[160px] items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
+            class="inline-flex min-w-40 items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
           >
             Ver servicios
           </NuxtLink>
@@ -241,7 +241,7 @@ useSeoMeta({
 
         <NuxtLink
           to="/contact"
-          class="inline-flex min-w-[170px] items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100"
+          class="inline-flex min-w-42.5 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-sm transition hover:bg-slate-100"
         >
           Ir a contacto
         </NuxtLink>
