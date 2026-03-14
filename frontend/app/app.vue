@@ -1,18 +1,11 @@
 <template>
-  <div>
+  <div class="min-h-screen bg-slate-50 text-slate-900">
     <AppNavbar />
 
-    <main class="container main-content">
+    <main class="mx-auto max-w-6xl px-6 py-10">
       <NuxtPage />
     </main>
 
     <AppFooter />
   </div>
 </template>
-
-<style scoped>
-.main-content {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-</style>
