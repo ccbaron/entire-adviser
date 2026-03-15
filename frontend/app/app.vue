@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen bg-slate-50 text-slate-900">
+  <div class="flex min-h-screen flex-col bg-slate-50 text-slate-900">
     <AppNavbar />
 
-    <main class="mx-auto max-w-6xl px-6 pb-10">
+    <main class="mx-auto w-full max-w-6xl flex-1 px-6 pb-10">
       <NuxtPage />
     </main>
 

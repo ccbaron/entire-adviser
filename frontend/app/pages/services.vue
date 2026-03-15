@@ -7,7 +7,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="space-y-6">
+  <!-- Services page content -->
+  <section class="space-y-6 pt-10 lg:pt-14">
     <div class="max-w-3xl space-y-3">
       <p
         class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500"

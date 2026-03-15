@@ -5,6 +5,7 @@ useSeoMeta({
     "Contacta con Entire Studio para explorar proyectos de desarrollo web, branding, marketing digital o consultoría tecnológica.",
 });
 
+// Form state and handlers
 const form = reactive({
   name: "",
   email: "",
@@ -46,7 +47,8 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <section class="grid gap-10 lg:grid-cols-2">
+  <!-- Contact page content -->
+  <section class="grid gap-10 pt-10 lg:grid-cols-2 lg:pt-14">
     <div class="space-y-4">
       <p
         class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500"

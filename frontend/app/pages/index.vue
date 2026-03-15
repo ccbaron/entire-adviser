@@ -7,14 +7,16 @@ useSeoMeta({
 </script>
 
 <template>
+  <!-- Home page content -->
   <section class="space-y-24">
     <section class="hero-bleed">
       <div class="hero-overlay"></div>
       <div class="hero-grid"></div>
 
+      <!--- Hero section -->
       <div class="mx-auto max-w-6xl px-6">
         <section
-          class="hero relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24"
+          class="hero relative grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-30"
         >
           <div class="space-y-6">
             <span
@@ -90,6 +92,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Services section -->
     <section class="space-y-8">
       <div class="max-w-2xl space-y-3">
         <p
@@ -173,6 +176,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- How we work section -->
     <section
       class="grid gap-8 rounded-4xl border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-[0.95fr_2fr] lg:p-10"
     >
@@ -231,6 +235,7 @@ useSeoMeta({
       </div>
     </section>
 
+    <!-- Contact section -->
     <section
       class="rounded-4xl bg-slate-950 px-8 py-12 text-white shadow-sm lg:px-10 lg:py-14"
     >
