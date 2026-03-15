@@ -1,15 +1,21 @@
 import { AppError } from "../utils/AppError.js";
 import { createContactLead } from "../services/contact.service.js";
+import { contactSchema } from "../validators/contact.validator.js";
 
 export const submitContactForm = async (req, res, next) => {
   try {
-    const { name, email, company, message } = req.body;
+    const parsedData = contactSchema.safeParse(req.body);
 
-    if (!name || !email || !message) {
-      throw new AppError("Nombre, email y mensaje son obligatorios.", 400);
+    if (!parsedData.success) {
+      const firstErrorMessage =
+        parsedData.error.issues[0]?.message ||
+        "Datos de formulario no válidos.";
+
+      throw new AppError(firstErrorMessage, 400);
     }
 
-    // LOG PARA MONITORIZAR EL FORMULARIO
+    const { name, email, company, message } = parsedData.data;
+
     if (process.env.NODE_ENV !== "production") {
       console.log("📩 Nuevo formulario recibido:");
       console.log({
@@ -20,7 +26,6 @@ export const submitContactForm = async (req, res, next) => {
         timestamp: new Date().toISOString(),
       });
     }
-
     const contact = await createContactLead({
       name,
       email,

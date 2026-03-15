@@ -248,7 +248,7 @@ useSeoMeta({
           >
             Contacto
           </p>
-          <h2 class="text-3xl font-semibold tracking-tight text-white">
+          <h2 class="text-2xl font-semibold tracking-tight text-white">
             Construyamos una presencia digital más sólida para tu negocio.
           </h2>
           <p class="max-w-xl text-base leading-7 text-slate-300">
