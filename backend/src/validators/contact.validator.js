@@ -8,11 +8,11 @@ export const contactSchema = z.object({
     .max(100, "El nombre no puede superar los 100 caracteres."),
 
   email: z
-    .string()
-    .trim()
-    .email("Debes introducir un email válido.")
-    .max(150, "El email no puede superar los 150 caracteres.")
-    .transform((value) => value.toLowerCase()),
+  .string()
+  .trim()
+  .toLowerCase()
+  .max(150, 'El email no puede superar los 150 caracteres.')
+  .pipe(z.email('Debes introducir un email válido.')),
 
   company: z
     .string()
