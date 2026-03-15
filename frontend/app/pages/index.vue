@@ -56,7 +56,7 @@ useSeoMeta({
           <div
             class="hero-panel rounded-3xl border border-white/40 bg-white/65 p-8 shadow-[0_10px_40px_rgba(15,23,42,0.08)] backdrop-blur-xl"
           >
-            <div class="space-y-6">
+            <div class="space-y-8">
               <div class="rounded-2xl bg-slate-100/80 p-5">
                 <p class="text-sm font-medium text-slate-500">Enfoque</p>
                 <p class="mt-2 text-lg font-semibold text-slate-900">
@@ -303,7 +303,7 @@ useSeoMeta({
       rgba(99, 102, 241, 0.14),
       transparent 26%
     );
-  filter: blur(70px);
+  filter: blur(85px);
   animation: heroFloat 14s ease-in-out infinite alternate;
   transform-origin: center;
 }
