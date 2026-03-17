@@ -17,8 +17,7 @@ export const submitContactForm = asyncHandler(async (req, res) => {
   const { name, email, company, message } = parsedData.data;
 
   if (process.env.NODE_ENV !== "production") {
-    console.log("📩 Nuevo formulario recibido:");
-    console.log({
+    console.log("📩 Nuevo formulario recibido:", {
       name,
       email,
       company,

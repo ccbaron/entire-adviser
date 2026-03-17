@@ -86,8 +86,9 @@ const handleSubmit = async () => {
         </div>
       </div>
 
+      <!-- Contact form -->
       <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-        <form class="space-y-5" @submit.prevent="handleSubmit">
+        <form class="space-y-5" novalidate @submit.prevent="handleSubmit">
           <div>
             <label
               for="name"
