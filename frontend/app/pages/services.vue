@@ -17,9 +17,7 @@ useSeoMeta({
           Servicios
         </p>
 
-        <h1
-          class="text-4xl font-semibold tracking-tight text-slate-900"
-        >
+        <h1 class="text-4xl font-semibold tracking-tight text-slate-900">
           Soluciones digitales para marcas y empresas en crecimiento.
         </h1>
 

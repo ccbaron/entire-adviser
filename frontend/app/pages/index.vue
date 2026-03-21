@@ -7,6 +7,7 @@ useSeoMeta({
 </script>
 
 <template>
+  <!-- Main page content -->
   <section class="space-y-24 pb-8">
     <section class="hero-bleed">
       <div class="hero-grid"></div>
@@ -16,6 +17,7 @@ useSeoMeta({
       <div class="hero-diagonal hero-diagonal-two"></div>
       <div class="hero-noise"></div>
 
+      <!-- Hero content -->
       <div class="mx-auto max-w-6xl px-6">
         <section
           class="relative grid min-h-[calc(100vh-76px)] items-center gap-10 py-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-10"
@@ -43,6 +45,7 @@ useSeoMeta({
               </p>
             </div>
 
+            <!-- Call to action buttons -->
             <div class="flex flex-wrap gap-4">
               <NuxtLink
                 to="/contact"
@@ -106,10 +109,10 @@ useSeoMeta({
 
           <div class="relative z-10">
             <div
-              class="hero-shell rounded-[2rem] border border-white/70 bg-white/70 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-2xl"
+              class="hero-shell rounded-4xl border border-white/70 bg-white/70 p-4 shadow-[0_20px_60px_rgba(15,23,42,0.12)] backdrop-blur-2xl"
             >
               <div
-                class="overflow-hidden rounded-[1.65rem] bg-slate-950 p-6 text-white"
+                class="overflow-hidden rounded-4xl bg-slate-950 p-6 text-white"
               >
                 <div class="flex items-center justify-between gap-4">
                   <div>
@@ -152,7 +155,7 @@ useSeoMeta({
                     </div>
 
                     <div
-                      class="rounded-2xl border border-white/10 bg-white/5 p-5"
+                      class="rounded-4xl border border-white/10 bg-white/5 p-5"
                     >
                       <p class="text-sm text-slate-400">Resultado</p>
                       <p class="mt-2 font-medium text-white">
@@ -162,7 +165,7 @@ useSeoMeta({
                   </div>
 
                   <div
-                    class="rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/10 to-indigo-400/10 p-5"
+                    class="rounded-4xl border border-cyan-400/20 bg-linear-to-br from-cyan-400/10 to-indigo-400/10 p-5"
                   >
                     <div class="flex items-start justify-between gap-4">
                       <div>
@@ -217,7 +220,7 @@ useSeoMeta({
 
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
+          class="group rounded-4xl border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
         >
           <div
             class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
@@ -234,7 +237,7 @@ useSeoMeta({
         </article>
 
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
+          class="group rounded-4xl border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
         >
           <div
             class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
@@ -251,7 +254,7 @@ useSeoMeta({
         </article>
 
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
+          class="group rounded-4xl border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
         >
           <div
             class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
@@ -268,7 +271,7 @@ useSeoMeta({
         </article>
 
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
+          class="group rounded-4xl border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
         >
           <div
             class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
@@ -285,7 +288,7 @@ useSeoMeta({
         </article>
 
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
+          class="group rounded-4xl border border-slate-200/80 bg-white/90 p-7 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(15,23,42,0.10)]"
         >
           <div
             class="inline-flex rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
@@ -302,7 +305,7 @@ useSeoMeta({
         </article>
 
         <article
-          class="group rounded-[2rem] border border-slate-200/80 bg-gradient-to-br from-slate-950 to-slate-900 p-7 text-white shadow-[0_18px_45px_rgba(15,23,42,0.16)] transition duration-300 hover:-translate-y-1.5"
+          class="group rounded-4xl border border-slate-200/80 bg-linear-to-br from-slate-950 to-slate-900 p-7 text-white shadow-[0_18px_45px_rgba(15,23,42,0.16)] transition duration-300 hover:-translate-y-1.5"
         >
           <div
             class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-300"
@@ -501,7 +504,7 @@ useSeoMeta({
     rgba(15, 23, 42, 0.13) 0px,
     rgba(15, 23, 42, 0.15) 1px,
     transparent 1px,
-    transparent 72px
+    transparent 88px
   );
   mask-image: linear-gradient(
     to right,
