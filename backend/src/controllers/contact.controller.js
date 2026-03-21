@@ -3,6 +3,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import { sendSuccess } from "../utils/sendSuccess.js";
 import { createContactLead } from "../services/contact.service.js";
 import { contactSchema } from "../validators/contact.validator.js";
+import { logger } from "../utils/logger.js";
 
 export const submitContactForm = asyncHandler(async (req, res) => {
   const parsedData = contactSchema.safeParse(req.body);
@@ -17,13 +18,16 @@ export const submitContactForm = asyncHandler(async (req, res) => {
   const { name, email, company, message } = parsedData.data;
 
   if (process.env.NODE_ENV !== "production") {
-    console.log("📩 Nuevo formulario recibido:", {
-      name,
-      email,
-      company,
-      message,
-      timestamp: new Date().toISOString(),
-    });
+    logger.info(
+      {
+        name,
+        email,
+        company,
+        message,
+        timestamp: new Date().toISOString(),
+      },
+      "New contact form submission received",
+    );
   }
 
   const contact = await createContactLead({
@@ -35,7 +39,7 @@ export const submitContactForm = asyncHandler(async (req, res) => {
 
   return sendSuccess(res, {
     statusCode: 201,
-    message: "Formulario recibido correctamente. Te contactaremos pronto.",
+    message: "Contact form submitted successfully. We will get back to you soon.",
     data: {
       id: contact._id,
       name: contact.name,

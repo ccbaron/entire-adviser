@@ -2,22 +2,14 @@ import "dotenv/config";
 import app from "./app.js";
 import { env } from "./config/env.js";
 import { connectDB } from "./db/connectDB.js";
+import { logger } from "./utils/logger.js";
 
 const startServer = async () => {
-  try {
-    console.log("Connecting to MongoDB...");
+  await connectDB();
 
-    await connectDB();
-
-    console.log("MongoDB connected successfully");
-
-    app.listen(env.port, () => {
-      console.log(`Server running at http://localhost:${env.port}`);
-    });
-  } catch (error) {
-    console.error("Failed to start server:", error);
-    process.exit(1);
-  }
+  app.listen(env.port, () => {
+    logger.info(`Backend server running at http://localhost:${env.port}`);
+  });
 };
 
 startServer();
