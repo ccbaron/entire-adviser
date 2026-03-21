@@ -1,5 +1,6 @@
 import { Contact } from "../models/Contact.js";
 import { sendNewLeadNotification } from "./email.service.js";
+import { logger } from "../utils/logger.js";
 
 export const createContactLead = async ({ name, email, company, message }) => {
   const contact = await Contact.create({
@@ -16,8 +17,23 @@ export const createContactLead = async ({ name, email, company, message }) => {
       company,
       message,
     });
+
+    logger.info(
+      {
+        contactId: contact._id,
+        email,
+      },
+      "New lead notification sent successfully",
+    );
   } catch (error) {
-    console.error("Error al enviar notificación de nuevo lead:", error);
+    logger.error(
+      {
+        err: error,
+        contactId: contact._id,
+        email,
+      },
+      "Error sending new lead notification",
+    );
   }
 
   return contact;

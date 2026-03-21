@@ -1,10 +1,18 @@
+import { logger } from "../utils/logger.js";
+
 export const errorHandler = (error, req, res, next) => {
   const statusCode = error.statusCode || 500;
   const message = error.message || "Internal server error";
 
-  if (process.env.NODE_ENV !== "production") {
-    console.error("Error:", error);
-  }
+  logger.error(
+    {
+      err: error,
+      method: req.method,
+      url: req.originalUrl,
+      statusCode,
+    },
+    "Request error",
+  );
 
   res.status(statusCode).json({
     ok: false,
