@@ -5,6 +5,11 @@
   font-family: "Inter", Arial, sans-serif;
 }
 
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}
+
 html,
 body,
 #__nuxt {
@@ -15,7 +20,7 @@ body {
   margin: 0;
   background-color: #f8fafc;
   color: #0f172a;
-  font-family: "", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
