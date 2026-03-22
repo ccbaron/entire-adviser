@@ -10,7 +10,6 @@ useSeoMeta({
   <!-- Main page content -->
   <section class="space-y-24 pb-8">
     <section class="hero-bleed">
-      <div class="hero-grid"></div>
       <div class="hero-radial hero-radial-left"></div>
       <div class="hero-radial hero-radial-right"></div>
       <div class="hero-diagonal hero-diagonal-one"></div>
@@ -188,9 +187,6 @@ useSeoMeta({
                 </div>
               </div>
             </div>
-
-            <div class="hero-ring hero-ring-one"></div>
-            <div class="hero-ring hero-ring-two"></div>
           </div>
         </section>
       </div>
@@ -446,23 +442,6 @@ useSeoMeta({
     );
 }
 
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image:
-    linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 92%);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.75),
-    transparent 92%
-  );
-  opacity: 0.45;
-}
-
 .hero-radial {
   position: absolute;
   top: 50%;
@@ -583,27 +562,6 @@ useSeoMeta({
 .hero-shell {
   position: relative;
   z-index: 2;
-}
-
-.hero-ring {
-  position: absolute;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  pointer-events: none;
-}
-
-.hero-ring-one {
-  width: 15rem;
-  height: 15rem;
-  right: -3rem;
-  top: -2rem;
-}
-
-.hero-ring-two {
-  width: 9rem;
-  height: 9rem;
-  left: -1rem;
-  bottom: 1rem;
 }
 
 .cta-glow {
