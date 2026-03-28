@@ -7,12 +7,12 @@
         <span
           class="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/70 bg-white/80 text-sm font-semibold text-slate-900 shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition duration-300 group-hover:-translate-y-0.5"
         >
-          ES
+          EB
         </span>
 
         <div class="flex flex-col leading-none">
           <span class="text-sm font-semibold tracking-[0.18em] text-slate-900">
-            ENTIRE STUDIO
+            ENTIRE BASE
           </span>
           <span class="mt-1 text-xs text-slate-500">
             Consultoría tecnológica y digital

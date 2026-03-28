@@ -3,6 +3,7 @@ import { sendNewLeadNotification } from "./email.service.js";
 import { logger } from "../utils/logger.js";
 
 export const createContactLead = async ({ name, email, company, message }) => {
+  // Persist the lead first so a notification outage never loses business data.
   const contact = await Contact.create({
     name,
     email,
@@ -11,6 +12,7 @@ export const createContactLead = async ({ name, email, company, message }) => {
   });
 
   try {
+    // Email delivery is intentionally best-effort and must not block API success.
     await sendNewLeadNotification({
       name,
       email,

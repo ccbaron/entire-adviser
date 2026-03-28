@@ -1,8 +1,8 @@
 <script setup>
 useSeoMeta({
-  title: "Contacto | Entire Studio",
+  title: "Contacto | Entire Base",
   description:
-    "Contacta con Entire Studio para explorar proyectos de desarrollo web, branding, marketing digital o consultoría tecnológica.",
+    "Contacta con Entire Base para explorar proyectos de desarrollo web, branding, marketing digital o consultoría tecnológica.",
 });
 
 // Form state and handlers
@@ -17,6 +17,7 @@ const loading = ref(false);
 const successMessage = ref("");
 const errorMessage = ref("");
 
+// Reset locally so the UI stays in sync with the backend success response.
 const resetForm = () => {
   form.name = "";
   form.email = "";
@@ -24,6 +25,7 @@ const resetForm = () => {
   form.message = "";
 };
 
+// Send the raw form object and let the backend remain the source of validation truth.
 const handleSubmit = async () => {
   successMessage.value = "";
   errorMessage.value = "";

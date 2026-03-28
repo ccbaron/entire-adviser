@@ -1,6 +1,6 @@
 # Entire Adviser
 
-Sitio corporativo y plataforma base para captacion de leads de Entire Adviser / Entire Studio.
+Sitio corporativo y plataforma base para captacion de leads de Entire Adviser / Entire Base.
 
 Incluye:
 - Frontend en Nuxt 4 para las paginas publicas.

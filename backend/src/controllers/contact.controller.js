@@ -6,6 +6,7 @@ import { contactSchema } from "../validators/contact.validator.js";
 import { logger } from "../utils/logger.js";
 
 export const submitContactForm = asyncHandler(async (req, res) => {
+  // Validate at the HTTP boundary so downstream layers receive trusted data.
   const parsedData = contactSchema.safeParse(req.body);
 
   if (!parsedData.success) {
@@ -17,6 +18,7 @@ export const submitContactForm = asyncHandler(async (req, res) => {
 
   const { name, email, company, message } = parsedData.data;
 
+  // Keep detailed payload logging out of production to reduce sensitive data exposure.
   if (process.env.NODE_ENV !== "production") {
     logger.info(
       {
@@ -30,6 +32,7 @@ export const submitContactForm = asyncHandler(async (req, res) => {
     );
   }
 
+  // Delegate persistence and notification side effects to the service layer.
   const contact = await createContactLead({
     name,
     email,

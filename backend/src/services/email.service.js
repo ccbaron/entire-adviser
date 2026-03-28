@@ -9,7 +9,7 @@ export const sendNewLeadNotification = async ({
   company,
   message,
 }) => {
-  const subject = `Nuevo lead recibido desde Entire Studio: ${name}`;
+  const subject = `Nuevo lead recibido desde Entire Base: ${name}`;
 
   const html = `
     <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #0f172a;">

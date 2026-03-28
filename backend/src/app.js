@@ -8,10 +8,12 @@ import { errorHandler } from "./middlewares/errorHandler.js";
 
 const app = express();
 
+// Apply security headers before exposing any route handlers.
 app.use(helmet());
 
 app.use(
   cors({
+    // Keep the API restricted to the configured frontend origin.
     origin: env.frontendUrl,
   }),
 );
@@ -25,6 +27,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Mount API routes before the fallback middlewares.
 app.use("/api/contact", contactRoutes);
 
 app.use(notFound);

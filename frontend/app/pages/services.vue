@@ -1,8 +1,8 @@
 <script setup>
 useSeoMeta({
-  title: "Servicios | Entire Studio",
+  title: "Servicios | Entire Base",
   description:
-    "Conoce los servicios de Entire Studio: desarrollo web, branding, marketing digital, estrategia y automatización.",
+    "Conoce los servicios de Entire Base: desarrollo web, branding, marketing digital, estrategia y automatización.",
 });
 </script>
 
@@ -22,7 +22,7 @@ useSeoMeta({
         </h1>
 
         <p class="max-w-2xl text-lg leading-8 text-slate-600">
-          Entire Studio reúne estrategia, desarrollo y marketing para construir
+          Entire Base reúne estrategia, desarrollo y marketing para construir
           una presencia digital sólida, diferenciada y preparada para
           evolucionar.
         </p>

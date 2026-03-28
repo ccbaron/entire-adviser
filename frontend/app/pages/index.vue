@@ -1,8 +1,8 @@
 <script setup>
 useSeoMeta({
-  title: "Entire Studio | Consultoría tecnológica, automatización e IA",
+  title: "Entire Base | Consultoría tecnológica, automatización e IA",
   description:
-    "Entire Studio diseña experiencias web, sistemas digitales y soluciones de automatización para marcas y empresas que buscan crecer con una base sólida, moderna y preparada para evolucionar.",
+    "Entire Base diseña experiencias web, sistemas digitales y soluciones de automatización para marcas y empresas que buscan crecer con una base sólida, moderna y preparada para evolucionar.",
 });
 </script>
 
@@ -38,7 +38,7 @@ useSeoMeta({
               </h1>
 
               <p class="max-w-2xl text-lg leading-8 text-slate-600">
-                Entire Studio conecta estrategia, diseño, desarrollo y
+                Entire Base conecta estrategia, diseño, desarrollo y
                 automatización para construir activos digitales sólidos,
                 elegantes y alineados con objetivos reales de negocio.
               </p>
@@ -118,7 +118,7 @@ useSeoMeta({
                     <p
                       class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400"
                     >
-                      Entire Studio
+                      Entire Base
                     </p>
                     <h2 class="mt-2 text-2xl font-semibold tracking-tight">
                       Arquitectura digital para marcas modernas
