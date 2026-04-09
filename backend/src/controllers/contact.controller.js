@@ -42,7 +42,7 @@ export const submitContactForm = asyncHandler(async (req, res) => {
 
   return sendSuccess(res, {
     statusCode: 201,
-    message: "Contact form submitted successfully. We will get back to you soon.",
+    message: "Mensaje recibido. Nos pondremos en contacto contigo en la mayor brevedad posible.",
     data: {
       id: contact._id,
       name: contact.name,

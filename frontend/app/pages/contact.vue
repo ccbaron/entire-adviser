@@ -31,8 +31,10 @@ const handleSubmit = async () => {
   errorMessage.value = "";
   loading.value = true;
 
+  const config = useRuntimeConfig();
+
   try {
-    const response = await $fetch("http://localhost:4000/api/contact", {
+    const response = await $fetch(`${config.public.apiUrl}/api/contact`, {
       method: "POST",
       body: form,
     });
