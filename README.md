@@ -1,6 +1,6 @@
-# Entire Adviser
+# Entire Base
 
-Sitio corporativo y plataforma base para captacion de leads de Entire Adviser / Entire Base.
+Sitio corporativo y plataforma base para captacion de leads de Entire Base.
 
 Incluye:
 - Frontend en Nuxt 4 para las paginas publicas.
@@ -11,7 +11,7 @@ Incluye:
 ## Arquitectura
 
 ```
-entire-adviser/
+entire-base/
 	backend/               # API Express (contacto, health, validaciones)
 	frontend/              # Web principal en Nuxt 4
 	frontend-spa-backup/   # Version SPA anterior (respaldo)
@@ -51,11 +51,11 @@ cd ../frontend
 npm install
 ```
 
-## Variables de entorno (backend)
+## Variables de entorno
 
-El backend requiere estas variables para iniciar.
+### Backend
 
-Crea el archivo `backend/.env`:
+El backend requiere estas variables para iniciar. Crea `backend/.env` tomando como referencia `backend/.env.example`:
 
 ```env
 PORT=4000
@@ -65,12 +65,20 @@ NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 
 # MongoDB
-MONGODB_URI=mongodb://127.0.0.1:27017/entire-adviser
+MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 # Resend
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxx
 NOTIFICATION_EMAIL=tu-correo@dominio.com
-FROM_EMAIL=Entire Adviser <no-reply@tudominio.com>
+FROM_EMAIL=onboarding@resend.dev
+```
+
+### Frontend
+
+Crea `frontend/.env` tomando como referencia `frontend/.env.example`:
+
+```env
+NUXT_PUBLIC_API_URL=http://localhost:4000
 ```
 
 Notas:
@@ -148,7 +156,7 @@ Respuesta exitosa (`201`):
 ```json
 {
 	"ok": true,
-	"message": "Contact form submitted successfully. We will get back to you soon.",
+	"message": "Mensaje recibido. Nos pondremos en contacto contigo en la mayor brevedad posible.",
 	"data": {
 		"id": "...",
 		"name": "Juan Perez",
@@ -191,12 +199,25 @@ Si se supera el limite, devuelve un error con `ok: false`.
 4. Se intenta enviar email de notificacion via Resend.
 5. El API responde `201` aunque falle el envio de email (el lead ya queda guardado).
 
-## Produccion
+## Despliegue
 
-- Configura correctamente `FRONTEND_URL` con el dominio real del frontend.
-- Publica backend y frontend como servicios separados.
-- Usa un MongoDB de produccion.
-- Configura `NODE_ENV=production`.
+El proyecto esta configurado para desplegarse en Vercel con el backend y el frontend como proyectos independientes.
+
+### Backend
+
+1. Importa el repo en Vercel y establece el **Root Directory** en `backend`.
+2. Configura las variables de entorno del backend en el panel de Vercel.
+3. Vercel usara `vercel.json` y `api/index.js` como punto de entrada.
+
+### Frontend
+
+1. Importa el mismo repo y establece el **Root Directory** en `frontend`.
+2. Configura `NUXT_PUBLIC_API_URL` apuntando a la URL del backend desplegado.
+
+### MongoDB Atlas
+
+- En **Network Access** permite `0.0.0.0/0` para que Vercel pueda conectar (IPs dinamicas).
+- Usa un cluster activo; el plan gratuito M0 se pausa tras 60 dias sin actividad.
 
 Importante:
 - Actualmente la pagina de contacto usa una URL fija para el backend: `http://localhost:4000/api/contact`.
