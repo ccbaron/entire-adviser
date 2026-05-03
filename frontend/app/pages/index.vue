@@ -23,7 +23,7 @@ useSeoMeta({
         >
           <div class="relative z-10 max-w-3xl space-y-7">
             <div
-              class="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-600 shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur"
+              class="inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-widest sm:tracking-[0.22em] text-slate-600 shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur"
             >
               <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
               Estrategia · Web · Automatización · IA
